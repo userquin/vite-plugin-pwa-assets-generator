@@ -19,6 +19,12 @@ export default defineConfig({
       pwaAssets: {
         config: true,
       },
+      workbox: {
+        globPatterns: ['**/*.{js,css,html,png,svg,ico}'],
+        cleanupOutdatedCaches: true,
+        clientsClaim: true,
+        skipWaiting: true,
+      },
       devOptions: {
         enabled: true,
         /* when using generateSW the PWA plugin will switch to classic */
